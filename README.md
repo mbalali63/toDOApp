@@ -29,3 +29,11 @@ These are the main challenges I face during the development:
    retain or not.
     
 
+
+## Implementation Process:
+1. Add Components
+2. Implement layout
+3. Style Components 
+4. Implement functionality 
+5. Test and Review
+6. Publish
