@@ -27,6 +27,9 @@ These are the main challenges I face during the development:
    I will use a JSON array
    at the moment, I am not sure that during the executation of the session, this array will
    retain or not.
+   - Update: After implementing, it was revealed that this idea does not work. 
+
+
     
 
 ## Required Functionalities
