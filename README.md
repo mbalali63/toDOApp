@@ -25,6 +25,7 @@ These are the main challenges I face during the development:
 1. Saving and updating tasks data 
    To resolve this problem, considering that I am not ready to work with backend tools,
    I will use a JSON array
-   
+   at the moment, I am not sure that during the executation of the session, this array will
+   retain or not.
     
 

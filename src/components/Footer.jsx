@@ -1,4 +1,5 @@
 import React from "react";
+import './../styles/Footer.css'
 
 
 export default function Footer() {
@@ -7,9 +8,9 @@ export default function Footer() {
             <div className="leftIconSet">
                 <div className="addBtn">&#x2b;</div>
                 <div className="searchBtn">&#128270;</div>
+                <div className="speratorBar">&#124;</div>
+                <div className="status"><p>3 Items Left</p></div>
             </div>
-            <div className="speratorBar">&#10073;</div>
-            <div className="centerSection"><p>3</p><p>Items Left</p></div>
             <div className="rightBtnSet">
                 <button className="filterAll">All</button>
                 <button className="filterActive">Active</button>

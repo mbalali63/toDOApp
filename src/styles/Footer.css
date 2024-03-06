@@ -1,0 +1,56 @@
+
+
+footer {
+    width: 100%;
+    height: 90px;
+    background-color: #EEEBEB;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.leftIconSet {
+    width: 227px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left:112px;
+}
+
+.addBtn {
+    font-size: 50px;
+    margin-right:8px;
+}
+.searchBtn {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    margin-right: 22px;
+}
+.speratorBar{
+    font-size: 54px;
+    height: 64px;
+    color:#AEA8A8;
+    margin-right: 23px;;
+}
+.status {
+    font-size: 19px;
+    text-wrap: nowrap;
+}
+
+.rightBtnSet {
+    width: 239px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right:65px;
+}
+
+.rightBtnSet button {
+    font-size: 19px;
+    background-color: transparent ;
+    border:none;
+    cursor: pointer;
+}
