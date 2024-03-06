@@ -29,6 +29,16 @@ These are the main challenges I face during the development:
    retain or not.
     
 
+## Required Functionalities
+1. When user push Add button (beside the input), the context inside input bar must be added to
+   tasksJSON, and shown in the tasks list.
+2. When each task checkbox is selected, it must be highligted as completed. and tasksJSON completed field must be updated as true.
+3. When user filter all, all of the tasks must be shown.
+4. When user filter Active, all of the tasks wich are not completed (false) must be shown.
+5. When user filter Completed, all of the tasks wich are completed (false) must be shown.
+6. When user click the search icon, a search box window must be shown and let the user to search for task
+7. When user clicl the + icon, a task add window must be shown and let the user to add a new task
+8. The status bar must always shows the number of not completed tasks
 
 ## Implementation Process:
 1. Add Components

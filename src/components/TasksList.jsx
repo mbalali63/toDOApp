@@ -2,13 +2,18 @@ import React from "react";
 import './../styles/TasksList.css'
 
 let tasksJSON = [
-    '{"description":"Learn Math","status":"false"}',
-    '{"description":"Learn React","status":"false"}',
-    '{"description":"Write New Paper","status":"false"}',
-    '{"description":"Read Book I","status":"false"}',
-    '{"description":"Purchase Requirments","status":"false"}'
+    '{"description":"Learn Math","completed":"false"}',
+    '{"description":"Learn React","completed":"false"}',
+    '{"description":"Write New Paper","completed":"false"}',
+    '{"description":"Read Book I","completed":"false"}',
+    '{"description":"Purchase Requirments","completed":"false"}'
 ];
 let tasksJsonObj = tasksJSON.map((element) => JSON.parse(element))
+
+
+function addTask() {
+
+}
 
 export default function TasksList() {
     const tasksList = tasksJsonObj.map( (element,index) => 
