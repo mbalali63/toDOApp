@@ -6,30 +6,69 @@ import Footer from "./components/Footer"
 import './../src/styles/app.css'
 
 function App() {
-  const [tasksJSON,setTasksJSON] = useState([
-    '{"description":"Learn Math","completed":"false"}',
-    '{"description":"Learn React","completed":"false"}',
-    '{"description":"Write New Paper","completed":"false"}',
-    '{"description":"Read Book I","completed":"false"}',
-    '{"description":"Purchase Requirments","completed":"false"}'
+  const [tasks,setTasks] = useState([
+    {description:"Learn Math",completed:false,show:true},
+    {description:"Learn React",completed:false,show:true},
+    {description:"Write New Paper",completed:false,show:true},
+    {description:"Read Book I",completed:false,show:true},
+    {description:"Purchase Requirments",completed:false,show:true}
   ]);
-  let tasksJsonObj = tasksJSON.map((element) => JSON.parse(element))
+//  let tasksJsonObj = tasks.map((element) => JSON.parse(element))
   function addTask() {
       const taskInput = document.getElementById('task-input-box');
       if (taskInput.value === '') {
           alert('Please Enter New Task Description in the box.')
       }else
       {
-          const newTaskJSON = `{"description":"${taskInput.value}","completed":"false"}`;
-          setTasksJSON((prevTasksJSON) => [...prevTasksJSON, newTaskJSON])
+          const newTaskJSON = {description:`${taskInput.value}`,completed:false,show:true};
+          setTasks((prevTasksJSON) => [...prevTasksJSON, newTaskJSON])
       }
   }
+  function toggleComplete(description) {
+    setTasks((prevTasks) => prevTasks.map( (task) => task.description === description ? {...task,completed: !task.completed} : task))
+  }
+
+
+  function filterAll() {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) => ({ ...task, show: true }))
+    );
+  }
+  function filterCompleted() {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) => ({ ...task, show: task.completed }))
+    );
+  }
+  
+  function filterActive() {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) => ({ ...task, show: !task.completed }))
+    );
+  }
+/*   function filterAll() {
+    tasks.forEach( (element) => {
+      element.show = true;
+    })
+    setTasks( () => tasks);
+  } */
+/*   function filterCompleted() {
+    tasks.forEach( (element) => {
+      element.show = element.completed
+    })
+    setTasks( () => tasks)
+  }
+  function filterActive() {
+    tasks.forEach( (element) => {
+      element.show = !element.completed
+    })
+    setTasks( () => tasks)
+  } */
   return (
     <main>
       <HeaderSec />
       <SearchBar addTask = {addTask} />
-      <TasksList tasksJsonObj={tasksJsonObj} />
-      <Footer />
+      <TasksList tasksObj={tasks} toggleComplete={toggleComplete} />
+      <Footer filterAll = {filterAll} filterActive={filterActive} filterCompleted={filterCompleted}/>
 
     </main>
   )

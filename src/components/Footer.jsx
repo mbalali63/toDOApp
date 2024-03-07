@@ -2,7 +2,7 @@ import React from "react";
 import './../styles/Footer.css'
 
 
-export default function Footer() {
+export default function Footer({filterAll,filterCompleted,filterActive}) {
     return (
         <footer>
             <div className="leftIconSet">
@@ -12,9 +12,9 @@ export default function Footer() {
                 <div className="status"><p>3 Items Left</p></div>
             </div>
             <div className="rightBtnSet">
-                <button className="filterAll">All</button>
-                <button className="filterActive">Active</button>
-                <button className="filterCompleted">Completed</button>
+                <button className="filterAll" onClick= {filterAll}>All</button>
+                <button className="filterActive" onClick= {filterActive}>Active</button>
+                <button className="filterCompleted" onClick= {filterCompleted}>Completed</button>
             </div>
         </footer>
     )
