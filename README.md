@@ -67,9 +67,9 @@ These are the main challenges I face during the development:
 3. When user filter all, all of the tasks must be shown.<span style="color:green;">Done</span>
 4. When user filter Active, all of the tasks wich are not completed (false) must be shown.<span style="color:green;">Done</span>
 5. When user filter Completed, all of the tasks wich are completed (false) must be shown.<span style="color:green;">Done</span>
-6. When user click the search icon, a search box window must be shown and let the user to search for task
-7. When user clicl the + icon, a task add window must be shown and let the user to add a new task
-8. The status bar must always shows the number of not completed tasks
+6. When user click the search icon, a search box window must be shown and let the user to search for task <span style="color:red;">Omitted from the project</span>
+7. When user clicl the + icon, a task add window must be shown and let the user to add a new task<span style="color:red;">Omitted from the project</span>
+8. The status bar must always shows the number of not completed tasks<span style="color:red;">Omitted from the project</span>
 
 ## Implementation Process:
 1. Add Components
@@ -82,3 +82,12 @@ These are the main challenges I face during the development:
 ## Special Notes and Modifications:
 1. In the initial design I called a component, SearchBar, while actually it is not for seach. So I will change it to 
    InputBar
+   |Before         | After       |
+   |:--------------|:------------|
+   |SearchBar.css	 | InputBar.css|
+   |search-bar	    | input-bar   |
+   |SearchBar.jsx	 | InputBar.jsx|
+
+   		
+		
+		

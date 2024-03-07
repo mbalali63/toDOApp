@@ -5,6 +5,7 @@ import TasksList from "./components/TasksList"
 import Footer from "./components/Footer"
 import './../src/styles/app.css'
 
+
 function App() {
   const [tasks,setTasks] = useState([
     {description:"Learn Math",completed:false,show:true},
@@ -13,6 +14,14 @@ function App() {
     {description:"Read Book I",completed:false,show:true},
     {description:"Purchase Requirments",completed:false,show:true}
   ]);
+  function updateStatusBar() {
+    console.log('Hi')
+    const status = document.getElementById('status')  
+    let count = 0;
+    tasks.forEach((item) => item.completed && count++)
+    status.innerText = `${count} Items Completed.`
+  }
+  
   function addTask() {
       const taskInput = document.getElementById('task-input-box');
       if (taskInput.value === '') {
@@ -24,7 +33,7 @@ function App() {
       }
   }
   function toggleComplete(description) {
-    setTasks((prevTasks) => prevTasks.map( (task) => task.description === description ? {...task,completed: !task.completed} : task))
+    setTasks((prevTasks) => prevTasks.map( (task) => task.description === description ? {...task,completed: !task.completed} : task))    
   }
 
 
