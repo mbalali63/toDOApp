@@ -1,5 +1,5 @@
 
-.search-bar {
+.input-bar {
     width: 770px;
     height: 60px;
     margin:58px 95px 65px 95px;
@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.search-bar input {    
+.input-bar input {    
     width: 770px;
     height: 60px;
     border:1px solid black;    
@@ -17,7 +17,7 @@
     padding: 0 10px;
 }
 
-.search-bar button {
+.input-bar button {
     width: 60px;
     height: 60px;
     background-color: #fff;

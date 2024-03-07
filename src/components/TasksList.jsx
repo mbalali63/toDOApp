@@ -3,9 +3,6 @@ import './../styles/TasksList.css'
 
 export default function TasksList({tasksObj,toggleComplete}) {
 
-
-    /* const visibileTasks = tasksObj.filter((item0) => item0.show); */
-
     const tasksList = tasksObj.map( (item,index) => 
         {
             const description = item.description;

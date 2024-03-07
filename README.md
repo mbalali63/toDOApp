@@ -78,3 +78,7 @@ These are the main challenges I face during the development:
 4. Implement functionality 
 5. Test and Review
 6. Publish
+
+## Special Notes and Modifications:
+1. In the initial design I called a component, SearchBar, while actually it is not for seach. So I will change it to 
+   InputBar
